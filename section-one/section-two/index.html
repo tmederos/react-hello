@@ -12,7 +12,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
   <!-- Font Awesome -->
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
-  <title>Let's React</title>
+  <title>Stateless Functional Components</title>
 </head>
 <body>
   <!-- DESIGNATED LOCATION TO INSERT REACT CONTENT-->
@@ -21,11 +21,16 @@
   <!-- JAVASCRIPT -->
   <script type = "text/babel">
 
-    // RENDER REACT TO THE DOM - WILL ACCEPT TWO ARGUMENTS 
-    // (REACT WHAT, REACT WHERE)
+    // OUR FIRST STATELESS FUNCTIONAL COMPONENT
+    var ColorSpectrum = function() {
+      return(
+        <h1>Red, Orange, Yellow, Green, Blue, Indigo, Violet</h1>
+      );
+    }
+
     ReactDOM.render(
-      // REACT WHAT - JSX
-      <h1>Hello World</h1>,
+
+      
       // REACT WHERE - DIV WITH ID OF "APP"
       document.getElementById("app")
     );
