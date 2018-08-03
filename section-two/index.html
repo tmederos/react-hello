@@ -28,9 +28,57 @@
       );
     }
 
+    // CHALLENGE 
+    // CREATE A COMPONENT FOR EACH OF THE COLORS OF THE SPECTRUM AND RENDER
+    // THEM TO THE DOM WITHIN ON PARENT DIV
+
+    var Red = function(){
+      return(
+        <h1>Red</h1>
+      );
+    }
+    var Orange = function(){
+      return(
+        <h1>Orange</h1>
+      );
+    }
+    var Yellow = function(){
+      return(
+        <h1>Yellow</h1>
+      );
+    }
+    var Green = function(){
+      return(
+        <h1>Green</h1>
+      );
+    }
+    var Blue = function(){
+      return(
+        <h1>Blue</h1>
+      );
+    }
+    var Indigo = function(){
+      return(
+        <h1>Indigo</h1>
+      );
+    }
+    var Violet = function(){
+      return(
+        <h1>Violet</h1>
+      );
+    }
+
     ReactDOM.render(
 
-      <ColorSpectrum/>,
+      <div>
+        <Red/>
+        <Orange/>
+        <Yellow/>
+        <Green/>
+        <Blue/>
+        <Indigo/>
+        <Violet/>
+      </div>,
       // REACT WHERE - DIV WITH ID OF "APP"
       document.getElementById("app")
     );
