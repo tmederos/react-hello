@@ -1,82 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=Le, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- REACT LIBRARY -->
-  <script src="https://unpkg.com/react@15.5.4/dist/react.js"></script>
-  <!-- REACT DOM LIBRARY -->
-  <script src="https://unpkg.com/react-dom@15.5.4/dist/react-dom.js"></script>
-  <!-- BABEL LIBRARY -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js"></script>
-  <!-- Font Awesome -->
-  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css'>
-  <link rel="stylesheet" href="main.css">
-  <title>Styling Components</title>
-</head>
-<body>
-  <!-- DESIGNATED LOCATION TO INSERT REACT CONTENT-->
-  <div id="app">React has not rendered yet</div>
-
-  <!-- JAVASCRIPT -->
-  <script type = "text/babel">
-
-    var Red = function(){
-      return(
-        <h1>Red</h1>
-      );
-    }
-    var Orange = function(){
-      return(
-        <h1>Orange</h1>
-      );
-    }
-    var Yellow = function(){
-      return(
-        <h1>Yellow</h1>
-      );
-    }
-    var Green = function(){
-      return(
-        <h1>Green</h1>
-      );
-    }
-    var Blue = function(){
-      return(
-        <h1>Blue</h1>
-      );
-    }
-    var Indigo = function(){
-      return(
-        <h1>Indigo</h1>
-      );
-    }
-    var Violet = function(){
-      return(
-        <h1>Violet</h1>
-      );
-    }
-
-    ReactDOM.render(
-
-      <div>
-        <Red/>
-        <Orange/>
-        <Yellow/>
-        <Green/>
-        <Blue/>
-        <Indigo/>
-        <Violet/>
-      </div>,
-      // REACT WHERE - DIV WITH ID OF "APP"
-      document.getElementById("app")
-    );
-
-  </script>
-
-  </body> 
-
-  
-</body>
-</html>
+.red{
+  height: 50px;
+  width: 150px;
+  background-color: red;
+}
+.orange{
+  height: 50px;
+  width: 150px;
+  background-color: orange;
+}
+.yellow{
+  height: 50px;
+  width: 150px;
+  background-color: yellow;
+}
+.green{
+  height: 50px;
+  width: 150px;
+  background-color: green;
+}
+.blue{
+  height: 50px;
+  width: 150px;
+  background-color: blue;
+}
+.indigo{
+  height: 50px;
+  width: 150px;
+  background-color: indigo;
+}
+.violet{
+  height: 50px;
+  width: 150px;
+  background-color: violet;
+}
