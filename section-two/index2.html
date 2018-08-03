@@ -31,9 +31,40 @@
       }
     }
 
+    class Circle extends React.Component{
+      render(){
+        return(
+          <h1>Circle</h1>
+        );
+      }
+    }
+    class Square extends React.Component{
+      render(){
+        return(
+          <h1>Square</h1>
+        );
+      }
+    }
+    class Rectangle extends React.Component{
+      render(){
+        return(
+          <h1>Rectangle</h1>
+        );
+      }
+    }
+
+    // CHALLENGE
+    // CREATE CLASS COMPONENTS FOR CIRCLE, SQUARE, AND RECTANGLE
+    // RENDER TO THE DOM WITH A PARENT DIV TAG
+
+
     ReactDOM.render(
 
-      <Shapes/>,
+      <div>
+      <Circle/>
+      <Square/>
+      <Rectangle/>
+      </div>,
       // REACT WHERE - DIV WITH ID OF "APP"
       document.getElementById("app")
     );
