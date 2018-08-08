@@ -22,11 +22,15 @@
   <script type = "text/babel">
 
     // CHALLENGE 
-    // CREATE OUR FIRST CLASS COMPONENT
+    // CREATE A COMPLEX COMPONENT PASSING IN CIRCLE, SQUARE, RECTANGLE
     class Shapes extends React.Component{
       render(){
         return(
-          <h1 >Circle, Square, Rectangle</h1>
+          <div>
+            <Circle/>
+            <Square/> 
+            <Rectangle/>
+          </div>
         )
       }
     }
@@ -75,11 +79,7 @@
 
     ReactDOM.render(
 
-      <div>
-      <Circle/>
-      <Square/>
-      <Rectangle/>
-      </div>,
+      <Shapes/>,
       // REACT WHERE - DIV WITH ID OF "APP"
       document.getElementById("app")
     );
