@@ -29,32 +29,44 @@
     // Avatar Component
     function Avatar(){
       return(
-        <img src="https://pbs.twimg.com/profile_images/950559857827983361/uRo0mRlc_bigger.jpg" alt="profile picture"/>
+        <img src="https://pbs.twimg.com/profile_images/950559857827983361/uRo0mRlc_400x400.jpg" alt="profile picture"/>
       );
     }
 
     // Username Component
+    function UserName(){
+      return(
+        <h1>Profile Name</h1>
+      );
+    }
 
     // GetConnected Complex Component
-
-      // Like Component
-
-      // Share Component
-
-      // Add Component
-
-    var ColorSpectrum = function(){
+    function GetConnected(){
       return(
         <div>
-          <Red/>
-          <Orange/>
-          <Yellow/>
-          <Green/>
-          <Blue/>
-          <Indigo/>
-          <Violet/>
+          <Like/>
+          <Share/>
+          <Add/>
         </div>
-      )
+      );
+    }
+      // Like Component
+      function Like(){
+        return(
+          <div></div>
+        );
+    }
+      // Share Component
+      function Share(){
+        return(
+          <div></div>
+        );
+    }
+      // Add Component
+      function Add(){
+        return(
+          <div></div>
+        );
     }
 
     var Red = function() {
