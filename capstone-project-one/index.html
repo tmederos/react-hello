@@ -53,8 +53,13 @@
 
     // Username Component
     function UserName(){
+      var nameStyle= {
+        fontSize: 24,
+        fontFamily: "Arial, Helvetica, sans serif",
+        margin: 20
+      }
       return(
-        <h1>Profile Name</h1>
+        <h1 style={nameStyle}>Profile Name</h1>
       );
     }
 
@@ -68,22 +73,26 @@
         </div>
       );
     }
+
+      var iconStyle = {
+        margin: 20
+      }
       // Like Component
       function Like(){
         return(
-          <i className="fa fa-thumbs-o-up" aria-hidden="true"></i>
+          <i className="fa fa-thumbs-o-up" aria-hidden="true" style={iconStyle}></i>
         );
     }
       // Share Component
       function Share(){
         return(
-          <i className="fa fa-share" aria-hidden="true"></i>
+          <i className="fa fa-share" aria-hidden="true" style={iconStyle}></i>
         );
     }
       // Add Component
       function Add(){
         return(
-          <i className="fa fa-users" aria-hidden="true"></i>
+          <i className="fa fa-users" aria-hidden="true" style={iconStyle}></i>
         );
     }
 
