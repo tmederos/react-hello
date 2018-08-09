@@ -17,8 +17,13 @@
   
       class PersonGreeting extends React.Component {
         render(){
+          var personStyle = {
+            height: 300,
+            width: 300,
+            backgroundColor: this.props.color
+          }
           return(
-            <div>Hello, {this.props.name}!</div>
+            <div style={personStyle}>Hello, {this.props.name}!</div>
           );
         }
       }
