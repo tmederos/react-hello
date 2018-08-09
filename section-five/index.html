@@ -12,7 +12,14 @@
   <body>
     <div id="app">React has not rendered yet</div>
     <script type="text/babel">
-      
+
+      var Person = function(props) {
+        return(
+          <h1>Hi, {props.name}</h1>
+        );
+      }
+
+
       ReactDOM.render(
         <div>
         </div>,
