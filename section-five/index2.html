@@ -9,13 +9,22 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
     <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-    <title>Boiler Plate Code</title>
+    <title>Class Components Props</title>
   </head>
   <body>
     <div id="app">React has not rendered yet</div>
     <script type="text/babel">
+  
+      class PersonGreeting extends React.Component {
+        render(){
+          return(
+            <div>Hello, {this.props.name}!</div>
+          );
+        }
+      }
+
       ReactDOM.render(
-        <div/>,
+        <PersonGreeting/>,
         document.getElementById("app")
       );
     </script>
