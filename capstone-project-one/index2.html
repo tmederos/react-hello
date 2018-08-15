@@ -19,7 +19,7 @@
   <script type="text/babel">
 
     //Friendly Complex Component
-    function FriendLy(){
+    function FriendLy(props){
       var friendlyStyle = {
         display: 'inline-block',
         margin: 20,
@@ -33,14 +33,14 @@
       }
       return(
         <div style={friendlyStyle}>
-          <Avatar/>
-          <UserName/>
+          <Avatar img={props.img}/>
+          <UserName name={props.name}/>
           <GetConnected/>
         </div>
       );
     }
     // Avatar Component
-    function Avatar(){
+    function Avatar(props){
       var avatarStyle = {
         marginLeft: 27,
         marginTop: 20,
@@ -49,19 +49,20 @@
         borderRadius: "50%"
       }
       return(
-        <img src="https://pbs.twimg.com/profile_images/950559857827983361/uRo0mRlc_400x400.jpg" alt="profile picture" style={avatarStyle}/>
+        <img src={props.img} alt="profile picture" style={avatarStyle}/>
       );
     }
 
     // Username Component
-    function UserName(){
+    function UserName(props){
       var nameStyle= {
         fontSize: 24,
+        textAlign: 'center',
         fontFamily: 'Arial, Helvetica, sans serif',
         margin: 20
       }
       return(
-        <h1 style={nameStyle}>Profile Name</h1>
+        <h1 style={nameStyle}>{props.name}</h1>
       );
     }
 
@@ -115,7 +116,10 @@
     // FriendLY to child userName component.
 
     ReactDOM.render(
-        <FriendLy/>,
+        <FriendLy 
+        name="Trish"
+        img="https://pbs.twimg.com/profile_images/950559857827983361/uRo0mRlc_400x400.jpg"
+        />,
       document.getElementById("app")
     );
 </script>
