@@ -19,8 +19,11 @@
         var siblings = props.siblings;
         // use map method on siblings array to create new array
         // of JSX code to display on the DOM.
+        var siblingsListItem= siblings.map(function(person){
+          return <div>{person.name}</div>
+        });
         return(
-          
+          <div>siblingsListItem</div>
         );
       }
 
