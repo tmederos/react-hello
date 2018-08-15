@@ -15,15 +15,23 @@
     <div id="app">React has not rendered yet</div>
     <script type="text/babel">
 
+      // function FamilyList(props){
+      //   var siblings = props.siblings;
+      //   // use map method on siblings array to create new array
+      //   // of JSX code to display on the DOM.
+      //   var siblingsListItem= siblings.map(function(person){
+      //     return <div key={person.id}>{person.name}</div>
+      //   });
+      //   return(
+      //     <div>{siblingsListItem}</div>
+      //   );
+      // }
+
       function FamilyList(props){
-        var siblings = props.siblings;
-        // use map method on siblings array to create new array
-        // of JSX code to display on the DOM.
-        var siblingsListItem= siblings.map(function(person){
-          return <div>{person.name}</div>
-        });
         return(
-          <div>{siblingsListItem}</div>
+          <div>{props.siblings.map(function(person){
+            return <div key={person.id}>{person.name}</div>
+          })}</div>
         );
       }
 
