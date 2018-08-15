@@ -14,8 +14,28 @@
   <body>
     <div id="app">React has not rendered yet</div>
     <script type="text/babel">
+
+      function FamilyList(props){
+        var siblings = props.siblings;
+        // use map method on siblings array to create new array
+        // of JSX code to display on the DOM.
+        return(
+          
+        );
+      }
+
+      var siblings = [
+        { id: 1, name: "Chris", female: false },
+        { id: 2, name: "Jeff", female: false },
+        { id: 3, name: "Julie", female: true },
+        { id: 4, name: "Jessica", female: true }
+      ];
+
+
       ReactDOM.render(
-        <h1>Hello World</h1>,
+        <FamilyList
+          siblings={siblings}
+        />,
         document.getElementById("app")
       );
     </script>
