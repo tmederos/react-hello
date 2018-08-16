@@ -16,17 +16,18 @@
   <div id="app">React has not rendered yet</div>
   <script type="text/babel">
 
-    // CHALLENGE - CREATE ON COMPONENT AND USE PROPS TO RE-CREATE THE 
-    // PREVIOUS RESULTS
-
     var Color = function(props) {
-      var colorStyle = {
-        height: 50,
-        width: 150,
-        backgroundColor: props.color
-      }
+      var colorItems = props.colors.map(function(color){
+        var colorStyle = {
+          marginBottom: 20,
+          height: 50,
+          width: 150,
+          backgroundColor: color.color
+        };
+        return <div style={colorStyle} key={color.id}>{color.name}</div>
+      });
       return(
-        <h1 style={colorStyle}>{props.name}</h1>
+        <h1>{colorItems}</h1>
       );
     }
 
@@ -41,15 +42,7 @@
     ];
 
     ReactDOM.render(
-        <div>
-        <Color name="Red" color="red"/>
-        <Color name="Orange" color="orange"/>
-        <Color name="Yellow" color="yellow"/>
-        <Color name="Green" color="green"/>
-        <Color name="Blue" color="blue"/>
-        <Color name="Indigo" color="indigo"/>
-        <Color name="Violet" color="violet"/>
-        </div>,
+      <Color colors={colors}/>,
       document.getElementById("app")
     );
 </script>
