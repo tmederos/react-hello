@@ -57,12 +57,32 @@
           <GetConnected/>
         </div>
         });
-      
+        var femalePeopleItem = props.people.filter(function(person){
+          return person.gender === 'female';
+        }).map(function(person){
+          var friendlyStyle = {
+          display: 'inline-block',
+          margin: 20,
+          height: 300,
+          width: 200,
+          padding: 0,
+          backgroundColor: "#FFF",
+          WebkitFilter: "drop-shadow(0px 0px 5px #555)",
+          filter: "drop-shadow(0px 0px 5px #555)"
+        };
+        return <div style={friendlyStyle}>
+          <Avatar img={person.img}/>
+          <UserName name={person.name}/>
+          <GetConnected/>
+        </div>
+        });
       });
       return(
         <h1>Males</h1>
         <div>{malePeopleItem}</div>
         <hr/>
+        <h1>Females</h1>
+        <div>{femalePeopleItem}</div>
       );
     }
 
