@@ -51,7 +51,7 @@
           WebkitFilter: "drop-shadow(0px 0px 5px #555)",
           filter: "drop-shadow(0px 0px 5px #555)"
         };
-        return <div style={friendlyStyle}>
+        return <div key={person.id} style={friendlyStyle}>
           <Avatar img={person.img}/>
           <UserName name={person.name}/>
           <GetConnected/>
@@ -70,7 +70,7 @@
           WebkitFilter: "drop-shadow(0px 0px 5px #555)",
           filter: "drop-shadow(0px 0px 5px #555)"
         };
-        return <div style={friendlyStyle}>
+        return <div key={person.id} style={friendlyStyle}>
           <Avatar img={person.img}/>
           <UserName name={person.name}/>
           <GetConnected/>
