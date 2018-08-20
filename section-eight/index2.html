@@ -9,36 +9,11 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.26.0/babel.min.js"></script>
     <!-- Font Awesome -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
-    <title>Intro to State</title>
+    <title>Guess Age Game</title>
   </head>
   <body>
     <div id="app">React has not rendered yet</div>
     <script type="text/babel">
-
-      // class GuessAge extends React.Component{
-      //   constructor(props) {
-      //     super(props);
-      //     this.state = {
-      //       age: 'Guess My Age'
-      //     };
-      //     this.onButtonClick = this.onButtonClick.bind(this);
-      //   }
-      //   onButtonClick(){
-      //     this.setState({
-      //       age: '37'
-      //     });
-      //   }
-      //   render() {
-      //     return(
-      //       <div>
-      //         <h1>Guessing Game</h1>
-      //         <h2>{this.state.age}</h2>
-      //         <button onClick={this.onButtonClick}>reveal my age</button>
-      //       </div>
-      //     );
-      //   }
-      // }
-
       class GuessAge extends React.Component{
         constructor(props){
           super(props);
@@ -56,14 +31,11 @@
             <div>
               <h1>Guess Game</h1>
               <h2>{this.state.age}</h2>
-              This did not comment out */
-              /* <button onClick={this.onButtonVoteUp.bind(this)}>reveal my age</button> */
               <button onClick={() => this.onButtonClick()}>Reveal My Age</button>
             </div>
           );
         }
       }
-
       ReactDOM.render(
         <GuessAge/>,
         document.getElementById("app")
