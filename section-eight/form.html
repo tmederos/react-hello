@@ -14,8 +14,22 @@
   <body>
     <div id="app">React has not rendered yet</div>
     <script type="text/babel">
+
+      class NameForm extends React.Component{
+        render(){
+          return(
+            <form>
+              <label>
+                Name:
+                <input/>
+              </label>
+            </form>
+          );
+        }
+      }
+
       ReactDOM.render(
-        <h1>Hello World</h1>,
+        <NameForm/>,
         document.getElementById("app")
       );
     </script>
