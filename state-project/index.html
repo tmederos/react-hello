@@ -19,7 +19,7 @@
         constructor(props) {
           super(props);
           this.state = {
-            Total: '0'
+            votes: 0
           };
         }
         onButtonVoteUp(){
@@ -52,6 +52,7 @@
               <button onClick={() => this.onButtonVoteUp()}>+1</button>
               <p>Vote Here If You Do Not Want This</p>
               <button onClick={() => this.onButtonVoteDown()}>-1</button>
+              <p>Total:{this.state.votes}</p>
             </div>
           );
         }
