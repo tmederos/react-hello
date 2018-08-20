@@ -46,19 +46,35 @@
             age: 'Guess My Age'
           };
         }
-        onButtonClick(){
+        onButtonVoteUp(){
           this.setState({
             age: '37'
           });
         }
         render() {
+          var dinnerVoteStyle = {
+            display: "inline-block",
+            textAlign: "center",
+            margin: 20,
+            height: 500,
+            width: 300,
+            padding: 0,
+            backgroundColor: "#FFF",
+            WebkitFilter: "drop-shadow(0px 0px 5px #555)",
+            filter: "drop-shadow(0px, 0px, 5px, #555)"
+          }
+          var foodStyle = {
+            height: 200,
+            weight: 200,
+            marginTop: 20
+          }
           return(
-            <div>
+            <div style={dinnerVoteStyle}>
               <h1>Guessing Game</h1>
               <h2>{this.state.age}</h2>
               /* This did not comment out */
-              /* <button onClick={this.onButtonClick.bind(this)}>reveal my age</button> */
-              <button onClick={() => this.onButtonClick()}>reveal my age</button>
+              /* <button onClick={this.onButtonVoteUp.bind(this)}>reveal my age</button> */
+              <button onClick={() => this.onButtonVoteUDown()}>reveal my age</button>
             </div>
           );
         }

@@ -29,7 +29,13 @@
         }
         render() {
           return(
-
+            <div>
+              <h1>Dinner Time</h1>
+              <h2>Vote Here If You Want This</h2>
+              <button onClickYes={() => this.onButtonClick()}>+1</button>
+              <h2>Vote Here If You Do Not Want This</h2>
+              <button onClickNo={() => this.onButtonClick()}>-1</button>
+            </div>
           );
         }
       }
