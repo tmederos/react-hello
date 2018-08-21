@@ -19,9 +19,19 @@
         constructor(props){
           super(props);
           this.state = {
-            
+            items: []
           };
         }
+
+        // componentDidMount
+
+        componentDidMount(){
+          fetch('https://swapi.co/api/people')
+          .then( function(response) {
+            return response.json()
+          })
+        }
+
         render(){
           return(
              
