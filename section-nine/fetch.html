@@ -41,7 +41,14 @@
         }
 
         render(){
+          let items = this.state.items;
+          console.log(items);
           return(
+            <div>
+              {items.map(function(item){
+                return <h4 key={item.name}>{item.name}</h4>
+              })}
+            </div>
              
           );
         }
